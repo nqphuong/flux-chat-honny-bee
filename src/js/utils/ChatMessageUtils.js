@@ -16,7 +16,7 @@ module.exports = {
         return{
             id: 'm_' + timestamp,
             threadID: currentThreadID,
-            authorName: 'Bill',
+            authorName: 'Me',
             date: new Date(timestamp),
             text: text,
             isRead: true
