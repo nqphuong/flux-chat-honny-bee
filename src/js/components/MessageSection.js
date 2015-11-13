@@ -19,6 +19,7 @@ var MessageSection = React.createClass({
     componentDidMount: function(){
         this._scrollToBottom();
         MessageStore.addChangeListener(this._onChange);
+        ThreadStore.addChangeListener(this._onChange);
     },
     componentWillMount: function(){},
     componentDidUpdate: function(){},

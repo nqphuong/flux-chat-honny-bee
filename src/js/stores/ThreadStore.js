@@ -38,6 +38,11 @@ var ThreadStore = assign({}, EventEmitter.prototype, {
     emitChange: function(){
         this.emit(CHANGE_EVENT);
     },
+    
+    addChangeListener: function(callback){
+        this.on(CHANGE_EVENT, callback);
+    },
+    
     get: function(id){
         return _threads[id];
     },
@@ -59,6 +64,7 @@ var ThreadStore = assign({}, EventEmitter.prototype, {
             
             return 0;
         });
+        console.log(orderedThreads);
         return orderedThreads;
     },
     getCurrentID: function(){
