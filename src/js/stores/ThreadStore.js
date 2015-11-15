@@ -43,6 +43,10 @@ var ThreadStore = assign({}, EventEmitter.prototype, {
         this.on(CHANGE_EVENT, callback);
     },
     
+    removeChangeListener: function(callback){
+        this.removeListener(CHANGE_EVENT, callback);
+    },
+    
     get: function(id){
         return _threads[id];
     },

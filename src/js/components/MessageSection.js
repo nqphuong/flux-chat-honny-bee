@@ -21,7 +21,10 @@ var MessageSection = React.createClass({
         MessageStore.addChangeListener(this._onChange);
         ThreadStore.addChangeListener(this._onChange);
     },
-    componentWillMount: function(){},
+    componentWillMount: function(){
+        MessageStore.removeChangeListener(this._onChange);
+        ThreadStore.removeChangeListener(this._onChange);
+    },
     componentDidUpdate: function(){},
     
     render: function(){
